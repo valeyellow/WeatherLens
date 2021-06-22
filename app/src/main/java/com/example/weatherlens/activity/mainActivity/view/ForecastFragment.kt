@@ -3,9 +3,12 @@ package com.example.weatherlens.activity.mainActivity.view
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.weatherlens.R
 import com.example.weatherlens.activity.mainActivity.model.ForecastData
+import com.example.weatherlens.adapters.ForecastDataAdapter
 import com.example.weatherlens.databinding.FragmentForecastBinding
+import com.example.weatherlens.utils.SimpleDividerItemDecoration
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,7 +30,17 @@ class ForecastFragment : Fragment(R.layout.fragment_forecast) {
             forecastData = it
         }
         val binding = FragmentForecastBinding.bind(view)
-        binding.apply {
+        binding.forecastRv.apply {
+            layoutManager = LinearLayoutManager(requireContext())
+            adapter =
+                ForecastDataAdapter(forecastDataList = forecastData, context = requireContext())
+            addItemDecoration(
+                SimpleDividerItemDecoration(
+                    requireContext(),
+                    R.drawable.item_divider
+                )
+            )
+            setHasFixedSize(true)
         }
     }
 }
