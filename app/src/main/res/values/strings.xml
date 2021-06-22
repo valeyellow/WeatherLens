@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WeatherLens</string>
+    <string name="failureMsg">Something went wrong at our end!</string>
+    <string name="retryBtnText">Retry</string>
+    <string name="queryCityName">Bangalore</string>
+    <string name="forecastTempString">%1$d C</string>
 </resources>

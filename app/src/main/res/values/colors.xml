@@ -8,4 +8,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="forecastDayTvColor">#2A2A2A</color>
+    <color name="bgColor">#F5F6F7</color>
+    <color name="tempTextColor">#2A2A2A</color>
+    <color name="cityTextColor">#556799</color>
+    <color name="failureScreenBgColor">#E85959</color>
+    <color name="retryBtnBgColor">#4A4A4A</color>
 </resources>
