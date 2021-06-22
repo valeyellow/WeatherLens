@@ -69,6 +69,7 @@ class MainActivity : AppCompatActivity() {
                     if (forecastFragment != null) {
                         supportFragmentManager
                             .beginTransaction()
+                            .setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_up)
                             .replace(
                                 R.id.fragment_container,
                                 forecastFragment,
