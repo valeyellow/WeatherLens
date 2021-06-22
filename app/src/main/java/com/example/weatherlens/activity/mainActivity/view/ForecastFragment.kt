@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.weatherlens.R
 import com.example.weatherlens.activity.mainActivity.model.ForecastData
+import com.example.weatherlens.databinding.FragmentForecastBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -24,6 +25,9 @@ class ForecastFragment : Fragment(R.layout.fragment_forecast) {
         super.onViewCreated(view, savedInstanceState)
         arguments?.getParcelableArrayList<ForecastData>("forecastDataList")?.let {
             forecastData = it
+        }
+        val binding = FragmentForecastBinding.bind(view)
+        binding.apply {
         }
     }
 }

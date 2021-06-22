@@ -1,6 +1,7 @@
 package com.example.weatherlens.network
 
 import com.example.weatherlens.activity.mainActivity.model.ForecastData
+import com.example.weatherlens.activity.mainActivity.model.ForecastResponse
 import com.example.weatherlens.activity.mainActivity.model.WeatherResponse
 import com.example.weatherlens.utils.Constants.Companion.APP_ID
 import retrofit2.Response
@@ -23,5 +24,5 @@ interface WeatherAPI {
         city: String,
         @Query("APPID")
         appId: String = APP_ID
-    ): Response<ForecastData>
+    ): Response<ForecastResponse>
 }
